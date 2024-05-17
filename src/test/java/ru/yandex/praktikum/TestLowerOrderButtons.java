@@ -5,25 +5,23 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-public class TestLowerOrderButtons {
+import io.github.bonigarcia.wdm.WebDriverManager;
+public class TestLowerOrderButtons extends TestMethods{
     private WebDriver driver;
 
     @Test
     public void checkLowerButton(){
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+        createDriver();
 
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(ImportantQuestions.homepageURL);
         OrderButtons objOrderButtons = new OrderButtons(driver);
 
         objOrderButtons.clickOrderButtonLower();
         objOrderButtons.waitForOrderWindow("Для кого самокат");
     }
 
-    @After
+    @Override
     public void tearDown() {
-        driver.quit();
+        super.tearDown();
     }
 }
