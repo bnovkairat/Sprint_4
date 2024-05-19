@@ -12,12 +12,12 @@ public class OrderForm {
     private By addressField = By.className("Input_InputContainer__3NykH[@placeholder='* Адрес: куда привезти заказ']");
     private By stationField = By.className("select-search__value[@placeholder='* Станция метро']");
     private By phoneNumberField = By.className("Input_InputContainer__3NykH[@placeholder='* Телефон: на него позвонит курьер']");
-    private By buttonNext = By.xpath(".//[@id=\"root\"]/div/div[2]/div[3]/button");
+    private By buttonNext = By.className("Button_Button__ra12g Button_Middle__1CSJM[text()='Далее']");
     private By dateField = By.className("react-datepicker__input-container[@placeholder='* Когда привезти самокат']");
-    private By rentTimeField = By.xpath(".//[@id=\"root\"]/div/div[2]/div[2]/div[2]");
+    private By rentTimeField = By.className("Dropdown-placeholder[text()='Срок аренды']");
     private By rentTimeOneDayButton = By.className("Dropdown-option is-selected[text()='сутки']");
-    private By buttonOrder= By.xpath("//*[@id=\"root\"]/div/div[2]/div[3]/button[2]");
-    private By confirmOrderYesButton = By.xpath("//*[@id=\"root\"]/div/div[2]/div[5]/div[2]/button[2]");
+    private By buttonOrder= By.className("Button_Button__ra12g Button_Middle__1CSJM[text()='Заказать']");
+    private By confirmOrderYesButton = By.className("Button_Button__ra12g Button_Middle__1CSJM[text()='Да']");
 
     public OrderForm(WebDriver driver){
         this.driver = driver;

@@ -1,12 +1,9 @@
 package ru.yandex.praktikum;
 
-import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import io.github.bonigarcia.wdm.WebDriverManager;
-public class TestLowerOrderButtons extends TestMethods{
+
+public class TestLowerOrderButtons extends BaseTest {
     private WebDriver driver;
 
     @Test
@@ -20,8 +17,5 @@ public class TestLowerOrderButtons extends TestMethods{
         objOrderButtons.waitForOrderWindow("Для кого самокат");
     }
 
-    @Override
-    public void tearDown() {
-        super.tearDown();
-    }
+
 }

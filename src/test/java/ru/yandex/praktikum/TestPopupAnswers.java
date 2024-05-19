@@ -1,17 +1,13 @@
 package ru.yandex.praktikum;
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-    @RunWith(Parameterized.class)
-    public class TestPopupAnswers extends TestMethods {
+@RunWith(Parameterized.class)
+    public class TestPopupAnswers extends BaseTest {
 
         private final String question;
         private final String expectedAnswer;
@@ -51,9 +47,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
             }
 
-        @Override
-        public void tearDown() {
-            super.tearDown();
-        }
+
     }
 
